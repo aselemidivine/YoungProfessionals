@@ -1,29 +1,19 @@
+const navLinks = document.querySelectorAll(".nav-item");
+const menuToggle = document.getElementById("navbarExample01");
+const bsCollapse = new bootstrap.Collapse(menuToggle, { toggle: false });
+navLinks.forEach((l) => {
+  l.addEventListener("click", () => {
+    bsCollapse.toggle();
+  });
+});
 
-// const productContainers = [...document.querySelectorAll('.product-container')];
-// const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
-// const preBtn = [...document.querySelectorAll('.pre-btn')];
+// scroll to top
 
-// productContainers.forEach((item, i) => {
-//     let containerDimentions = item.getBoundingClientRect();
-//     let containerWidth = containerDimentions.width;
-
-//     nxtBtn[i].addEventListener('click', () => {
-//         item.scrollLeft += containerWidth;
-//     })
-    
-//     preBtn[i].addEventListener('click', () => {
-//         item.scrollLeft -= containerWidth;
-//     })
-// })
-
-// scroll to top 
-
-const toTop = document.querySelector (".to-top");
+const toTop = document.querySelector(".to-top");
 window.addEventListener("scroll", () => {
-    if  (window.pageYOffset > 100)  {
-        toTop.classList.add("active");
-    }
-    else {
-        toTop.classList.remove ("active");
-    }
-})
+  if (window.pageYOffset > 100) {
+    toTop.classList.add("active");
+  } else {
+    toTop.classList.remove("active");
+  }
+});
